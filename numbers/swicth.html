@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <script>
+      var hoy = new Date();
+      console.log(hoy);
+
+      var dia = hoy.getDay();
+      console.log(dia);
+
+      switch (dia) {
+        case 1:
+          resultat = "Lun";
+          break;
+        case 2:
+          resultat = "Dim";
+          break;
+        case 3:
+          resultat = "Dime";
+          break;
+        case 4:
+          resultat = "Dij";
+          break;
+        case 5:
+          resultat = "Div";
+          break;
+        case 6:
+          resultat = "Dib";
+          break;
+        case 7:
+          resultat = "Dom";
+          break;
+        default:
+          resultat = "mongol";
+      }
+      console.log(resultat);
+    </script>
+  </body>
+</html>

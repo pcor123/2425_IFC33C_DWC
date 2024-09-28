@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <script>
+      var a = 3.2;
+      var b = 5.4;
+
+      var pi = Math.pi; //valor de pi 3.14
+
+      var c = Math.floor(a); // redondetjar cap aball
+      var d = Math.floor(b);
+
+      console.log(a, b, c, d);
+
+      var e = Math.ceil(a); // redondetjar cap adalt
+      var f = Math.ceil(b);
+
+      console.log(a, b, e, f);
+
+      var g = Math.round(a); // redondetjar natural
+      var h = Math.round(b);
+
+      console.log(a, b, g, h);
+
+      // math per fer coses de math original
+
+      //num random
+      var i = Math.random();
+      console.log(i);
+
+      // num random entre rangs [1,6]
+      var j = Math.random() * 6;
+      var k = Math.random() * 6 + 1;
+      var l = Math.floor(Math.random() * 6 + 1);
+      console.log(j, k, l);
+
+      // num random entre rangs [2,6]
+      var m = Math.random() * 5; // [0,5]
+      var n = Math.random() * 3 + 2; // [2,5]
+
+      var max = 100;
+      var min = 95;
+      var formula = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log(formula);
+    </script>
+  </body>
+</html>
