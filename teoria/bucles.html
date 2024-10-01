@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Usario(userName, email, nom) {
+        this.userName = userName;
+        this.email = email;
+        this.nom = nom;
+      }
+      var usario1 = new Usario(
+        "pipoOnline",
+        "aaa@paucasesnovescifp.cat",
+        "pipo"
+      );
+      var usario2 = new Usario(
+        "pepeOnline",
+        "aaa@paucasesnovescifp.cat",
+        "pepe"
+      );
+      var usario3 = new Usario(
+        "papoOnline",
+        "aaa@paucasesnovescifp.cat",
+        "papo"
+      );
+
+      var usuarios = [usario1, usario2, usario3];
+      var i = 0;
+      while (i < usuarios.length) {
+        console.log(usuarios[i]);
+      }
+      // for normal
+      for (var i = 0; i < usuarios.length; i++) {
+        console.log(usuarios[i]);
+      }
+
+      //for in, itera propiedades
+
+      for(var clave in usuario){
+        console.log(clave)
+      }
+
+      // for of, itera valors
+      for(var usuario of usuario){
+        console.log(usuario)
+      }
+      
+      for(var usuario of usuario){
+        console.log(usuario.email)
+      }
+    </script>
+  </body>
+</html>
