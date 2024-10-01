@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+
+    <script>
+      var frutas = ["Manzana", "Pera", "Platano"];
+      console.log(frutas, frutas[1], frutas[2], frutas[3]);
+        
+      var a = frutas.pop();
+      console.log(frutas);
+      console.log(a);
+
+      frutas.unshift("Mango");
+      console.log(frutas, frutas[0]);
+      var b = frutas.shift();
+      console.log(frutas, frutas[0]);
+      console.log(b);
+
+      // Obetnir tamany array
+
+      var tam = frutas.length;
+      console.log(tam);
+
+      //Borrar element array
+
+      delete frutas[1]; // no recomanable
+      console.log(frutas, frutas[1]);
+
+      frutas.splice(1, 1); // eleminam, element array
+      console.log(frutas, frutas[1]);
+    </script>
+  </body>
+</html>
