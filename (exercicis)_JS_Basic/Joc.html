@@ -23,13 +23,17 @@
       var max = 2;
 
       var resultat = Math.floor(Math.random() * (max - min + 1)) + min;
-
+      //A la consola del navegador, es mostrara el numero que ha trat
       console.log("Resultat consola: ", resultat);
+
+      // variable que conte el que és vol mostrar a la alerta
       var missatge;
+
+      //operador ternari
       resultat > 1
         ? (missatge = "Has perdut, ha sortit creu.")
         : (missatge = "Has guanyat,ha sortit cara.");
-
+      //Mostrar missatge dins un requadre
       alert(missatge);
     </script>
   </body>
