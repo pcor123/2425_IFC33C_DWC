@@ -7,7 +7,6 @@
   </head>
   <body>
     <script>
-        
       function suma(a, b) {
         return a + b;
       }
@@ -19,13 +18,25 @@
       var c = b(4, 5); // es pot dir que b es suma
       console.log(c); // = 9,
 
-      function Persona(nom, apellido){
-        this.nom=nom;
-        this.apellido=apellido;
+      function Persona(nom, apellido) {
+        this.nom = nom;
+        this.apellido = apellido;
       }
 
-      persona1 = new Persona("Belen","Laserna Belenguer")
-      console.log(persona1)
+      persona1 = new Persona("Belen", "Laserna Belenguer");
+      console.log(persona1);
+
+      // funcions anonimas, funcions sense nom
+      var a = function () {
+        return "hola";
+      };
+      console.log(a());
+      // funcio flecha,no te nom,te parametres, es un mix entre la anomia i la normal
+      var b = function (x) {
+        return "hola" + x;
+      };
+      console.log(a());
+      console.log(b("Belen"));
     </script>
   </body>
 </html>
