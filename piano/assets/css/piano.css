@@ -2,18 +2,17 @@
 
 body {
   background-image: url("../img/background/background11.jpg");
- 
 }
 
 header {
   text-align: center;
 }
 
-.cos{
+.cos {
   display: flex;
   margin: auto;
   flex-direction: column;
-  width: 50%;
+  width: 700px;
 }
 
 .panel {
@@ -21,27 +20,51 @@ header {
   flex-direction: column;
   background-color: white;
   width: 100%;
-  height: 300px;
+  height: 350px;
   border-radius: 10px;
 }
 
 .cercant {
   height: 50%;
-  border: solid black;
+  border: dotted black 0.5px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .resultat {
+  display: flex;
+  flex-direction: column;
   height: 50%;
-  border: solid black;
+  border: dotted black 0.5px;
   text-align: center;
+  border-radius: 10px;
 }
 
+.resultats {
+  margin: auto;
+  display: flex;
+  width: 50%;
+  height: 20%;
+  text-align: left;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  flex-direction: row;
+}
 
+.subLletra {
+  color: red;
+}
 
+.boto {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  border-color: red;
+  border-radius: 3px;
+  height: 30px;
+}
 
 .piano {
-   
   background: -webkit-linear-gradient(
     -65deg,
     #000000,
