@@ -26,7 +26,6 @@ header {
 
 .cercant {
   height: 50%;
-  border: dotted black 0.5px;
   text-align: center;
   border-radius: 10px;
 }
@@ -35,7 +34,6 @@ header {
   display: flex;
   flex-direction: column;
   height: 50%;
-  border: dotted black 0.5px;
   text-align: center;
   border-radius: 10px;
 }
