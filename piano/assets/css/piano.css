@@ -1,11 +1,24 @@
 /*css tret de https://github.com/LFeh/piano/blob/master/dev/assets/css/style.css*/
-
+@font-face {
+  font-family: 'Italianno';
+  src: url('../fonts/Italianno/Italianno-Regular.ttf') format('truetype'); /* Corrige 'ttf' a 'truetype' */
+  font-style: normal; /* Normal */
+  font-weight: normal; /* Normal */
+}
 body {
   background-image: url("../img/background/background11.jpg");
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed;
+
 }
 
 header {
   text-align: center;
+  font-family: Italianno;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .cos {
@@ -25,12 +38,14 @@ header {
 }
 
 .cercant {
-  height: 50%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 45%;
   text-align: center;
   border-radius: 10px;
 }
 
 .resultat {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: flex;
   flex-direction: column;
   height: 50%;
@@ -39,6 +54,7 @@ header {
 }
 
 .resultats {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: auto;
   display: flex;
   width: 50%;
@@ -53,6 +69,11 @@ header {
   color: red;
 }
 
+
+.textResultat {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+}
 .boto {
   background-color: red;
   color: white;
@@ -60,6 +81,10 @@ header {
   border-color: red;
   border-radius: 3px;
   height: 30px;
+}
+
+.boto:hover {
+  color: black;
 }
 
 .piano {
