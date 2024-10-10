@@ -3,6 +3,7 @@ function Nota(nom, sostingut) {
   this.nom = nom;
   this.sostingut = sostingut;
 }
+
 // Constructor Esquelet
 const esquelet = {
   cerca: [], // array que guarda les notes afegides per addCerca
@@ -12,10 +13,10 @@ const esquelet = {
   ]
 };
 
-// funcio per afegir una nota a l'rray de cerca
+// funcio per afegir una nota a l'array de cerca
 function addCerca(nomNota, esSostingut) {
   let novaNota = new Nota(nomNota, esSostingut);
-  esquelet.cerca.push(novaNota.nom + (novaNota.esSostingut ? "#" : ""));
+  esquelet.cerca.push(novaNota.nom + (novaNota.sostingut ? "#" : ""));
 }
 
 // compara si un subconjunt de notes apareix en la melodia
@@ -38,8 +39,11 @@ function cercador() {
   const cercaNotes = esquelet.cerca; // Array de les notes a cercar
   const melodiesTrobades = [];
 
-  // cerca en un array de strings
-  const cercaString = cercaNotes.map(nota => nota);
+  // Crea un array de strings a partir de cercaNotes sense usar map
+  const cercaString = [];
+  for (let i = 0; i < cercaNotes.length; i++) {
+      cercaString.push(cercaNotes[i]);
+  }
 
   // comprova si la cerca existeix en cada partitura
   esquelet.partitures.forEach(partitura => {
@@ -56,9 +60,6 @@ function cercador() {
   }
 }
 
-
 addCerca("DO", false);
 addCerca("RE", false);
 cercador(); // Resultat: La Balanguera, Happy Birthday
-
-

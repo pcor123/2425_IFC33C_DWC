@@ -98,3 +98,27 @@ for (var i = 0; i < jsonObj.members.length; i++) {
     // Imprimir el resultado en consola
     console.log(superHeroe);
   }
+
+
+  function sacarInfo(){
+    let scuadName = jsonObj.squadName;
+    let homeTown = jsonObj.homeTown;
+    let formed = jsonObj.formed;
+    
+    console.log("-".repeat(26), scuadName, "-".repeat(26));
+    console.log("----- Ciudad de origen: ", homeTown, " // ", "Fecha de origen: ", formed, " -----");  
+
+    for(let i = 0; i < jsonObj.members.length; i++){
+        let member = jsonObj.members[i];
+        let name = member.name;
+        let age = member.age;
+        let secretIdentity = member.secretIdentity;
+
+        console.log("Nombre: ", name);
+        console.log("Edad: ", age);
+        console.log("Identidad secreta: ", secretIdentity);
+        console.log("Poderes: ", member.powers.join(", "));
+        console.log("-".repeat(70));
+    }
+}
+sacarInfo();
