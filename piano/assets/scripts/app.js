@@ -1,4 +1,5 @@
 // Constructor Nota
+// Constructor Nota
 function Nota(nom, sostingut) {
   this.nom = nom;
   this.sostingut = sostingut;
@@ -46,11 +47,12 @@ function cercador() {
   }
 
   // comprova si la cerca existeix en cada partitura
-  esquelet.partitures.forEach(partitura => {
+  for (let i = 0; i < esquelet.partitures.length; i++) {
+      const partitura = esquelet.partitures[i];
       if (cercaEnMelodia(partitura.melodia, cercaString)) {
           melodiesTrobades.push(partitura.nom);
       }
-  });
+  }
 
   // Mostra resultats
   if (melodiesTrobades.length > 0) {
@@ -60,6 +62,7 @@ function cercador() {
   }
 }
 
+// Exemple d'ús
 addCerca("DO", false);
 addCerca("RE", false);
 cercador(); // Resultat: La Balanguera, Happy Birthday
