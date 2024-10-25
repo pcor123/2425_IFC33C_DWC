@@ -17,7 +17,7 @@ function partitura(nombre, melodia) {
   this.melodia = melodia;
 }
 
-melodiaBalanguera = [
+let melodiaBalanguera = [
   new Nota("Do", ""),
   new Nota("Re", ""),
   new Nota("Mi", "#"),
@@ -26,7 +26,7 @@ melodiaBalanguera = [
   new Nota("Sol", ""),
 ];
 
-melodiaHappyBirthday = [
+let melodiaHappyBirthday = [
   new Nota("RE", ""),
   new Nota("DO", ""),
   new Nota("FA", ""),
@@ -40,27 +40,40 @@ melodiaHappyBirthday = [
 partituraHappyBirthday = new Partitura("Happy Birthday", melodiaHappyBirthday);
 partituraBalanguera = new Partitura("Balanguera", melodiaBalanguera);
 
-Partitura.push(partituraHappyBirthday);
+let partituras = []
 
-function cercador(partitura, cerca) {
+partituras.push(partituraHappyBirthday);
+partituras.push(partituraBalanguera);
+
+console.log(partitura)
+
+function cercador(partituras, cerca) {
   let resultat = [];
 
-  for (let i = 0; i < partitura.lenght; i++) {
+  for (let i = 0; i < partituras.length; i++) {
+    let partitura = partituras[i]; // Cambiado a "partitura" para mantener la referencia a la partitura actual
     for (let j = 0; j < partitura.melodia.length; j++) {
       let trobat = true;
-      for (let k = 0; k < cerca.lenght; k++) {
+      for (let k = 0; k < cerca.length; k++) {
+        // Verifica si no se sale de los límites de la melodía
         if (
-          j + k >= partitura[i].melodia.length ||
-          partitura[i].melodia[j + k].nota !== cerca[k].nota ||
-          partitura[i].melodia[j + k].tipus !== cerca[k].tipus
+          j + k >= partitura.melodia.length ||
+          partitura.melodia[j + k].nota !== cerca[k].nota ||
+          partitura.melodia[j + k].tipus !== cerca[k].tipus
         ) {
           trobat = false;
+          break; // Salir del bucle si no se encuentra
         }
+      }
+
+      // Si se encontró la secuencia, añadir a resultat
+      if (trobat) {
+        resultat.push(partitura); // Almacena la partitura que coincide
+        break; // Salir del bucle para no buscar más en esta partitura
       }
     }
   }
 
-  if (trobat) {
-    resultat.push(partitura);
-  }
+  return resultat; // Devolver las partituras que coinciden
 }
+

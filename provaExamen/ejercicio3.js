@@ -19,3 +19,13 @@ console.log(comprovarAnagrama("ana", "anana"));
 console.log(comprovarAnagrama("Ana", "ana"));
 console.log(comprovarAnagrama("Ana", "anA"));
 console.log(comprovarAnagrama("Ana", "AnA"));
+
+function anagrama(t1, t2) {
+    let resultat = false
+    t1 = t1.split.sort.join
+    console.log(t1)
+
+
+    t2 = t2.split.sort.join
+    console.log(t2)
+}

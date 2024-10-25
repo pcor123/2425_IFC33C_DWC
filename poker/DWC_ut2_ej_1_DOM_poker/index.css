@@ -1,0 +1,17 @@
+#resultado {
+    display: flex;
+    /* Usar flexbox para alinear las cartas en fila */
+    flex-wrap: wrap;
+    /* Permitir que las cartas se envuelvan si hay muchas */
+    justify-content: space-around;
+    /* Espacio alrededor de cada carta */
+    margin-top: 20px;
+    /* Margen superior para separar del botón */
+}
+
+#resultado div {
+    text-align: center;
+    /* Centrar texto debajo de cada imagen */
+    margin: 10px;
+    /* Margen alrededor de cada carta */
+}
