@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url("../img/background/background11.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* Estilos del header */
@@ -26,8 +37,10 @@ nav {
 /* Logo */
 .logo h1 {
   color: white;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 400;
+  font-style:normal;
+  font-family: lobster;
 }
 
 /* Links de navegación */
