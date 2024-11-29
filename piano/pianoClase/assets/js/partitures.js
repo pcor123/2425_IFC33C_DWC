@@ -39,7 +39,7 @@ const records = [
 ];
 
 // Generem 100 registres
-for (let i = 0; i < 100; i++) {
+for (let i = 1; i <= 100; i++) {
   const record = records[i % records.length]; // Agafa un registre de manera cíclica
   const row = document.createElement("tr"); // Crea una nova fila
 
@@ -54,14 +54,15 @@ for (let i = 0; i < 100; i++) {
 
   // Afegim els dos botons a la cel·la d'accions
   const detailsButton = document.createElement("button");
-  detailsButton.textContent = "Detalls";
-  detailsButton.classList.add("action-btn"); // Añadimos una clase
-  detailsButton.onclick = () => alert(`Veient detalls de: ${record.title}`);
+  detailsButton.classList.add("action-btn", "fa-solid", "fa-pen-to-square"); // Añadimos el icono
+  detailsButton.textContent = " Detalls"; // El icono con el texto
+  detailsButton.onclick = () =>
+    alert(`Veient detalls de: ${record.title} ${i} `);
 
   const deleteButton = document.createElement("button");
-  deleteButton.textContent = "Esborrar";
-  deleteButton.classList.add("action-btn"); // Añadimos una clase
-  deleteButton.onclick = () => alert(`Esborrant: ${record.title}`);
+  deleteButton.classList.add("action-btn", "fa-solid", "fa-trash"); // Añadimos el icono de papelera
+  deleteButton.textContent = " Esborrar"; // El icono con el texto
+  deleteButton.onclick = () => alert(`Esborrant: ${record.title} ${i}`);
 
   // Afegim els botons a la cel·la
   actionCell.appendChild(detailsButton);
@@ -78,3 +79,41 @@ for (let i = 0; i < 100; i++) {
 
 // Afegim el tbody a la taula
 table.appendChild(tbody);
+
+// Seleccionem els botons "Esborrar"
+const deleteButtons = document.querySelectorAll(".action-btn");
+
+// Afegim l'esdeveniment de clic a cada botó d'esborrar
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Mostrem una finestra emergent per confirmar l'eliminació
+    const confirmDelete = confirm(
+      "Estàs segur que vols eliminar aquesta partitura?"
+    );
+
+    if (confirmDelete) {
+      // Si l'usuari confirma, mostrem un missatge d'èxit
+      alert("Element esborrat");
+    } else {
+      // Si l'usuari cancela, mostrem un missatge de cancel·lació
+      alert("Acció cancel·lada");
+    }
+  });
+});
+
+//crear la funcio per al fer clicl al login, que surti una nova finestra piano.html
+let popup; // Variable global para almacenar la referencia de la ventana emergente
+
+        // Abre la ventana emergente
+        function abrirLogin() {
+            popup = window.open("/login.html", "_blank", "width=800,height=600");
+        }
+
+        // Cierra la ventana emergente si está abierta
+        function cerrarPopup() {
+            if (popup && !popup.closed) {
+                popup.close(); // Cerrar la ventana emergente si está abierta
+            } else {
+                alert("La ventana emergente no está abierta o ya ha sido cerrada.");
+            }
+        }
