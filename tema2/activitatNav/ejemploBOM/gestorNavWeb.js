@@ -1,5 +1,5 @@
 function mostrarURLActual(){
-    let urlActual = window.location.href;
+    let urlActual = window.location .href;
     alert("La url actual es:\n "+urlActual)
 }
 

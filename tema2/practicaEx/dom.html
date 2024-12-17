@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla Simple</title>
+  </head>
+  <body>
+    <table border="1" style="border-collapse: collapse; text-align: center">
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+      </tr>
+      <tr>
+        <td>Pau</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Pepo</td>
+        <td>20</td>
+      </tr>
+    </table>
+
+    <button onclick="agregarFila('Nuevo', 30)">Agregar Fila</button>
+    <button onclick="eliminarFila()">Eliminar</button>
+    <button onclick="contarFiles()">Contar Filas</button>
+    <button 
+
+    <script>
+      function agregarFila(Nombre, Edad) {
+        let tabla = document.querySelector("table");
+        let nuevaFila = document.createElement("tr");
+        let celdaNombre = document.createElement("td");
+        let celdaEdad = document.createElement("td");
+        celdaNombre.textContent = Nombre;
+        celdaEdad.textContent = Edad;
+        nuevaFila.appendChild(celdaNombre);
+        nuevaFila.appendChild(celdaEdad);
+        tabla.appendChild(nuevaFila);
+      }
+      function eliminarFila() {
+        let tabla = document.querySelector("table");
+        let files = tabla.rows.length;
+        if (files > 1) {
+          tabla.deleteRow(files - 1);
+        } else {
+          alert("No es pot eliminar la ultima fila");
+        }
+      }
+      function contarFiles() {
+        let tabla = document.querySelector("table");
+        let filas = tabla.rows.length; // Obtiene el número total de filas (incluyendo el encabezado)
+
+        let mostrafiles = document.createElement("p"); // Crea un nuevo elemento de párrafo
+        mostrafiles.innerText = `La tabla tiene ${filas} filas.`; // Establece el texto con el número de filas
+
+        document.body.appendChild(mostrafiles); // Agrega el párrafo al final del cuerpo del documento
+      }
+      window.onload = function (){
+        document.title = "ex dom"
+      }
+    </script>
+  </body>
+</html>
