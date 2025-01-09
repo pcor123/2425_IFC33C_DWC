@@ -1,0 +1,15 @@
+[EVENTOS]
+1. Usar addEventListener
+2. Organizar los manejadores de eventos en funciones indeependientes 
+   para mejorar la legibilidad y reutilizacion del codigo.
+
+*USOS*
+1. Canviar el contenido de un elemento que recibre el evento (propiedad target)
+2. Obtener las cordenadas del raton
+3. Prevenir el comportamiento por defecto de un evento(event.preventDefault())
+
+[HTML]
+1. 
+2. 
+3. La carga de los ficheros hs 
+4. No usar codigo JS dentro del body del HTML

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="ex5.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li onclick="mostrarTexto(this)">Elemento 1</li>
+      <li onclick="mostrarTexto(this)">Elemento 2</li>
+      <li onclick="mostrarTexto(this)">Elemento 3</li>
+    </ul>
+    <script>
+      function mostrarTexto(elemento) {
+        alert(`Has hecho clic en: ${elemento.innerText}`);
+        elemento.innerText = "Seleccionado";
+      }
+    </script>
+  </body>
+</html>

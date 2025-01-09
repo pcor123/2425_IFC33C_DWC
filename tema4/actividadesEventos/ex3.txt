@@ -1,0 +1,43 @@
+pegar esto en la consola del devtools:
+monitorEvents($0)
+
+resultado:
+
+mousemove
+Se activa continuamente mientras el puntero del mouse se mueve sobre un elemento. Útil para rastrear el movimiento del mouse.
+
+mouseover
+Se activa cuando el puntero del mouse entra en el área de un elemento. A diferencia de mouseenter, este se propaga hacia los elementos secundarios.
+
+pointerover
+Similar a mouseover, pero funciona con eventos de puntero (touch, stylus, etc.) además del mouse. Ofrece más control sobre dispositivos de entrada.
+
+pointerout
+Se activa cuando el puntero del mouse o de otro dispositivo de entrada sale del área de un elemento.
+
+mouseleave
+Se activa cuando el puntero abandona completamente un elemento. A diferencia de mouseout, no se activa al pasar a un elemento hijo.
+
+pointerleave
+Similar a mouseleave, pero específico para eventos de puntero.
+
+keypress
+(Obsoleto) Este evento se activaba cuando el usuario presionaba una tecla que generaba un carácter. En navegadores modernos, se recomienda usar keydown y keyup.
+
+keydown
+Se activa cuando se presiona una tecla, independientemente de si genera un carácter visible. Útil para detectar combinaciones de teclas.
+
+keyup
+Se activa cuando se suelta una tecla después de haberla presionado.
+
+textinput
+(Obsoleto) Se activaba cuando el usuario insertaba texto. Actualmente se recomienda usar el evento input.
+
+input
+Se activa cuando el valor de un elemento de entrada (como <input>, <textarea>, etc.) cambia. Se usa para detectar cambios en tiempo real en los campos de texto.
+
+click
+Se activa cuando el usuario hace clic en un elemento. Este evento se propaga hacia arriba en el DOM.
+
+focus
+Se activa cuando un elemento (como un campo de formulario) gana el foco, ya sea mediante un clic o al navegar con el teclado.

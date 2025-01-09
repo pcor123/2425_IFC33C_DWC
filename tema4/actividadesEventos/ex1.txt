@@ -1,0 +1,5 @@
+En Youtube
+[Acción > Nombre evento]
+Al hacer click en un video con el raton > click
+Al hacer scroll, se generan contenido en la pagina > scroll
+Al buscar con la barra de busqueda > submit
